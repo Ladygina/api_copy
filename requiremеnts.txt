@@ -1,0 +1,2 @@
+requests==2.32.3
+tqdm @ file:///C:/b/abs_f76j9hg7pv/croot/tqdm_1679561871187/work
