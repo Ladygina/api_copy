@@ -1,6 +1,7 @@
 import requests
 from tqdm import tqdm
 import time
+import json
 class VK:
 
 
@@ -62,6 +63,11 @@ class VK:
         json_curr['filename'] = filename
         json_curr['size'] = sizes
 
+        json_object = json.dumps(json_curr, indent=4)
+
+        # Writing to sample.json
+        with open(filename[:-4]+".json", "w") as outfile:
+            outfile.write(json_object)
         return json_curr
 
     def yandex_request(self, url, filename):
